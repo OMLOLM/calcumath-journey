@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calculator, BookOpen, Star, LineChart, Function as FunctionIcon } from 'lucide-react';
+import { Calculator, BookOpen, Star, LineChart, Sigma } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Header = ({
@@ -28,7 +28,7 @@ const Header = ({
               <span className="hidden sm:inline">Standard</span>
             </TabsTrigger>
             <TabsTrigger value="functions" className="text-sm sm:text-base text-white data-[state=active]:bg-white data-[state=active]:text-blue-700">
-              <FunctionIcon className="h-4 w-4 mr-1 sm:mr-2" />
+              <Sigma className="h-4 w-4 mr-1 sm:mr-2" />
               <span className="hidden sm:inline">Funksjoner</span>
             </TabsTrigger>
             <TabsTrigger value="graphs" className="text-sm sm:text-base text-white data-[state=active]:bg-white data-[state=active]:text-blue-700">
