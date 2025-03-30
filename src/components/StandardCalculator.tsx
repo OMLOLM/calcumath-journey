@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { ArrowLeft, X, Plus, Minus, Division, Equal } from 'lucide-react';
+import { ArrowLeft, X, Plus, Minus, Divide, Equal } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const StandardCalculator = () => {
@@ -119,7 +118,7 @@ const StandardCalculator = () => {
         <button className="special-button" onClick={toggleSign}>+/-</button>
         <button className="special-button" onClick={inputPercent}>%</button>
         <button className="operator-button" onClick={() => performOperation('/')}>
-          <Division size={20} />
+          <Divide size={20} />
         </button>
 
         <button className="number-button" onClick={() => inputDigit('7')}>7</button>

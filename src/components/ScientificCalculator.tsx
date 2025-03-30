@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { ArrowLeft, X, Plus, Minus, Division, Equal } from 'lucide-react';
+import { ArrowLeft, X, Plus, Minus, Divide, Equal } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -150,7 +149,7 @@ const ScientificCalculator = () => {
           <X size={20} />
         </button>
         <button className="operator-button" onClick={() => performOperation('/')}>
-          <Division size={20} />
+          <Divide size={20} />
         </button>
 
         <button className="number-button" onClick={() => inputDigit('1')}>1</button>
