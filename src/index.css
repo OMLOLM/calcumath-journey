@@ -59,11 +59,11 @@
 /* Custom calculator styles */
 @layer components {
   .calc-button {
-    @apply w-full h-14 rounded-lg flex items-center justify-center text-lg font-medium transition-all active:scale-95;
+    @apply w-full h-14 rounded-lg flex items-center justify-center text-lg font-medium transition-all active:scale-95 shadow-md hover:shadow-lg;
   }
   
   .number-button {
-    @apply calc-button bg-white hover:bg-gray-100 text-gray-800 shadow-sm;
+    @apply calc-button bg-white hover:bg-gray-100 text-gray-800;
   }
   
   .operator-button {
@@ -80,5 +80,33 @@
   
   .calc-display {
     @apply w-full p-4 bg-white rounded-lg shadow-inner text-right mb-4 font-mono;
+  }
+
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(-15%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
   }
 }
