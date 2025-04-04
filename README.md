@@ -1,58 +1,60 @@
-# Welcome to your Lovable project
+
+# Welcome to CalcuMath Journey
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/e24ff880-d458-46bc-96f4-384c60b87ec9
 
-## How can I edit this code?
+## How to download and run this project in VS Code
 
-There are several ways of editing your application.
+### Prerequisites
+- [Git](https://git-scm.com/downloads) installed on your machine
+- [Node.js & npm](https://nodejs.org/en/download/) installed (or use [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for easier Node.js version management)
+- [Visual Studio Code](https://code.visualstudio.com/download) installed
 
-**Use Lovable**
+### Step-by-step instructions
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e24ff880-d458-46bc-96f4-384c60b87ec9) and start prompting.
+1. **Clone the repository**
+   ```bash
+   git clone <YOUR_GIT_URL>
+   cd <YOUR_PROJECT_NAME>
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+2. **Open the project in VS Code**
+   ```bash
+   code .
+   ```
+   Alternatively, you can open VS Code, select "File" > "Open Folder" and navigate to your project directory.
 
-**Use your preferred IDE**
+3. **Install dependencies**
+   Open a terminal in VS Code (Terminal > New Terminal) and run:
+   ```bash
+   npm install
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The application will be available at http://localhost:8080
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+5. **VS Code Extensions that may be helpful**
+   - ESLint: For linting and code quality
+   - Prettier: For code formatting
+   - Tailwind CSS IntelliSense: For Tailwind CSS class suggestions
+   - React Developer Tools: To help with React debugging
 
-Follow these steps:
+## Editing the code
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Once you have the project open in VS Code, you can:
+- Browse the file structure in the Explorer panel (left sidebar)
+- Edit files directly in the editor
+- Use the integrated terminal for running commands
+- Use Git integration for version control
 
 ## What technologies are used for this project?
 
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
