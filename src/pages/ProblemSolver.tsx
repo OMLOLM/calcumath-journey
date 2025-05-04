@@ -1,11 +1,14 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import ExamProblemSolver from '@/components/ExamProblemSolver';
 import EnhancedFormulasReference from '@/components/EnhancedFormulasReference';
+import FormulaCalculator from '@/components/FormulaCalculator';
 import { BookOpen, Calculator, FileSearch } from 'lucide-react';
 
 const ProblemSolver = () => {
+  const [selectedFormula, setSelectedFormula] = useState<string | null>(null);
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-950 dark:text-white transition-colors duration-200">
       <Header currentTab="formulas" setCurrentTab={() => {}} onSearch={() => {}} />
@@ -32,7 +35,13 @@ const ProblemSolver = () => {
                 <BookOpen className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" />
                 Formelreferanse
               </h3>
-              <EnhancedFormulasReference />
+              <EnhancedFormulasReference onSelectFormula={setSelectedFormula} />
+              
+              {selectedFormula && (
+                <div className="mt-6">
+                  <FormulaCalculator formulaType={selectedFormula} />
+                </div>
+              )}
             </div>
           </div>
         </div>
