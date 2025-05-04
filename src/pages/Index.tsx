@@ -1,12 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import StandardCalculator from '@/components/StandardCalculator';
 import ScientificCalculator from '@/components/ScientificCalculator';
 import GraphCalculator from '@/components/GraphCalculator';
-import FormulasReference from '@/components/FormulasReference';
+import EnhancedFormulasReference from '@/components/EnhancedFormulasReference';
 import UnitConverter from '@/components/UnitConverter';
 import { BookOpen, Calculator, LineChart, Sigma, Star } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const [currentTab, setCurrentTab] = useState('standard');
@@ -48,6 +50,16 @@ const Index = () => {
             {currentTab === 'conversion' && 'Enhetskonvertering'}
           </h2>
 
+          {currentTab === 'formulas' && (
+            <div className="mb-4 flex justify-center">
+              <Link to="/problem-solver">
+                <Button variant="outline" className="bg-blue-100 hover:bg-blue-200 dark:bg-blue-800/30 dark:hover:bg-blue-700/40">
+                  <Calculator className="mr-2 h-4 w-4" /> Gå til 1-T Eksamen Problemløser
+                </Button>
+              </Link>
+            </div>
+          )}
+
           <div className="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl">
             {searchTerm && filteredContent ? (
               filteredContent
@@ -56,7 +68,7 @@ const Index = () => {
                 {currentTab === 'standard' && <StandardCalculator />}
                 {currentTab === 'functions' && <ScientificCalculator />}
                 {currentTab === 'graphs' && <GraphCalculator />}
-                {currentTab === 'formulas' && <FormulasReference />}
+                {currentTab === 'formulas' && <EnhancedFormulasReference />}
                 {currentTab === 'conversion' && <UnitConverter />}
               </>
             )}
