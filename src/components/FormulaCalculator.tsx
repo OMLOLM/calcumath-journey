@@ -277,7 +277,7 @@ const FormulaCalculator = ({ formulaType }: FormulaCalculatorProps) => {
       case 'pytagoras':
         return (
           <div className="space-y-4">
-            <div className="text-center mb-4 font-mono font-bold">a² + b² = c²</div>
+            <div className="text-center mb-4 font-math text-lg text-math-formula dark:text-blue-300">a² + b² = c²</div>
             <div className="grid grid-cols-3 gap-3">
               <div>
                 <Label htmlFor="a">a:</Label>
@@ -320,7 +320,7 @@ const FormulaCalculator = ({ formulaType }: FormulaCalculatorProps) => {
       case 'kvadratsetning3':
         return (
           <div className="space-y-4">
-            <div className="text-center mb-4 font-mono font-bold">
+            <div className="text-center mb-4 font-math text-lg text-math-formula dark:text-blue-300">
               {formulaType === 'kvadratsetning1' && '(a + b)² = a² + 2ab + b²'}
               {formulaType === 'kvadratsetning2' && '(a - b)² = a² - 2ab + b²'}
               {formulaType === 'kvadratsetning3' && '(a + b)(a - b) = a² - b²'}
@@ -352,7 +352,7 @@ const FormulaCalculator = ({ formulaType }: FormulaCalculatorProps) => {
       case 'circle-area':
         return (
           <div className="space-y-4">
-            <div className="text-center mb-4 font-mono font-bold">A = π × r²</div>
+            <div className="text-center mb-4 font-math text-lg text-math-formula dark:text-blue-300">A = π × r²</div>
             <div>
               <Label htmlFor="r">Radius (r):</Label>
               <Input 
@@ -368,7 +368,7 @@ const FormulaCalculator = ({ formulaType }: FormulaCalculatorProps) => {
       case 'triangle-area':
         return (
           <div className="space-y-4">
-            <div className="text-center mb-4 font-mono font-bold">A = (g × h) / 2</div>
+            <div className="text-center mb-4 font-math text-lg text-math-formula dark:text-blue-300">A = (g × h) / 2</div>
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <Label htmlFor="g">Grunnlinje (g):</Label>
@@ -396,7 +396,7 @@ const FormulaCalculator = ({ formulaType }: FormulaCalculatorProps) => {
       case 'sin':
         return (
           <div className="space-y-4">
-            <div className="text-center mb-4 font-mono font-bold">sin(θ) = motstående / hypotenus</div>
+            <div className="text-center mb-4 font-math text-lg text-math-formula dark:text-blue-300">sin(θ) = motstående / hypotenus</div>
             <div className="text-center text-sm text-gray-600 dark:text-gray-400 mb-3">
               Fyll inn enten vinkelen for å beregne sinusverdien, eller sinusverdien for å beregne vinkelen.
             </div>
@@ -427,7 +427,7 @@ const FormulaCalculator = ({ formulaType }: FormulaCalculatorProps) => {
       case 'cos':
         return (
           <div className="space-y-4">
-            <div className="text-center mb-4 font-mono font-bold">cos(θ) = hosliggende / hypotenus</div>
+            <div className="text-center mb-4 font-math text-lg text-math-formula dark:text-blue-300">cos(θ) = hosliggende / hypotenus</div>
             <div className="text-center text-sm text-gray-600 dark:text-gray-400 mb-3">
               Fyll inn enten vinkelen for å beregne cosinusverdien, eller cosinusverdien for å beregne vinkelen.
             </div>
@@ -458,7 +458,7 @@ const FormulaCalculator = ({ formulaType }: FormulaCalculatorProps) => {
       case 'tan':
         return (
           <div className="space-y-4">
-            <div className="text-center mb-4 font-mono font-bold">tan(θ) = motstående / hosliggende</div>
+            <div className="text-center mb-4 font-math text-lg text-math-formula dark:text-blue-300">tan(θ) = motstående / hosliggende</div>
             <div className="text-center text-sm text-gray-600 dark:text-gray-400 mb-3">
               Fyll inn enten vinkelen for å beregne tangensverdien, eller tangensverdien for å beregne vinkelen.
             </div>
@@ -516,7 +516,7 @@ const FormulaCalculator = ({ formulaType }: FormulaCalculatorProps) => {
         {result && (
           <div className="mt-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
             <h4 className="font-bold mb-2">Resultat:</h4>
-            <p className="font-mono text-lg text-center">{result}</p>
+            <p className="font-math text-lg text-center text-math-formula dark:text-blue-300">{result}</p>
           </div>
         )}
       </CardContent>

@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'math': ['Cambria Math', 'STIX Two Math', 'Latin Modern Math', 'serif'],
+				'mono': ['Consolas', 'Monaco', 'Courier New', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -67,7 +71,8 @@ export default {
 					'blue': '#2563eb',
 					'blue-dark': '#1e40af',
 					'light': '#f0f9ff',
-					'accent': '#38bdf8'
+					'accent': '#38bdf8',
+					'formula': '#4338ca'
 				}
 			},
 			borderRadius: {

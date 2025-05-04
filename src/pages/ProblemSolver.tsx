@@ -23,7 +23,7 @@ const ProblemSolver = () => {
           <div className="p-4 mb-6 bg-blue-100/50 dark:bg-blue-900/30 rounded-xl border border-blue-200 dark:border-blue-800">
             <p className="text-center text-sm text-blue-800 dark:text-blue-300">
               Denne verktøyet er utviklet for å hjelpe med matematiske problemer som ofte forekommer på Math 1-T eksamen. 
-              Du kan bruke kalkulatoren nedenfor til å løse lineære ligninger, andregradsfunksjoner, trigonometriske ligninger og nå også likningssystemer.
+              Du kan bruke kalkulatoren nedenfor til å løse lineære ligninger, andregradsfunksjoner, trigonometriske ligninger og likningssystemer.
             </p>
           </div>
 

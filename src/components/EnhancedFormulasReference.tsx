@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -291,7 +290,7 @@ const FormulaCard = ({ title, icon, formulas, explanation, onSelectFormula }: Fo
                   {formulas.map((item, index) => (
                     <TableRow key={item.id || index}>
                       <TableCell className="font-medium">{item.name || "-"}</TableCell>
-                      <TableCell className="font-mono bg-blue-50/70 dark:bg-blue-900/20">{item.formula}</TableCell>
+                      <TableCell className="formula-text bg-blue-50/70 dark:bg-blue-900/20">{item.formula}</TableCell>
                       {onSelectFormula && (
                         <TableCell>
                           {item.hasCalculator && (
@@ -323,7 +322,7 @@ const FormulaCard = ({ title, icon, formulas, explanation, onSelectFormula }: Fo
                 {item.name && (
                   <span className="col-span-2 text-sm font-medium text-gray-700 dark:text-gray-300">{item.name}:</span>
                 )}
-                <div className={`${item.name ? 'col-span-3' : 'col-span-5'} bg-blue-50/70 dark:bg-blue-900/20 p-2 rounded font-mono text-sm flex items-center justify-center`}>
+                <div className={`${item.name ? 'col-span-3' : 'col-span-5'} bg-blue-50/70 dark:bg-blue-900/20 p-2 rounded formula-text flex items-center justify-center`}>
                   {item.formula}
                   {item.hasCalculator && onSelectFormula && (
                     <Button 
