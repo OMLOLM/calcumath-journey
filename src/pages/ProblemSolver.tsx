@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import ExamProblemSolver from '@/components/ExamProblemSolver';
 import EnhancedFormulasReference from '@/components/EnhancedFormulasReference';
-import { BookOpen, Calculator } from 'lucide-react';
+import { BookOpen, Calculator, FileSearch } from 'lucide-react';
 
 const ProblemSolver = () => {
   return (
@@ -13,9 +13,16 @@ const ProblemSolver = () => {
       <main className="flex-1 container py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100 flex items-center justify-center gap-2">
-            <Calculator className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" />
-            1-T Eksamen Problemløser
+            <FileSearch className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" />
+            Math 1-T Eksamen Problemløser
           </h2>
+          
+          <div className="p-4 mb-6 bg-blue-100/50 dark:bg-blue-900/30 rounded-xl border border-blue-200 dark:border-blue-800">
+            <p className="text-center text-sm text-blue-800 dark:text-blue-300">
+              Denne verktøyet er utviklet for å hjelpe med matematiske problemer som ofte forekommer på Math 1-T eksamen. 
+              Du kan bruke kalkulatoren nedenfor til å løse lineære ligninger, andregradsfunksjoner, trigonometriske ligninger og nå også likningssystemer.
+            </p>
+          </div>
 
           <div className="p-4 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl">
             <ExamProblemSolver />
